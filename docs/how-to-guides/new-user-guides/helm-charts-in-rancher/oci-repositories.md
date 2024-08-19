@@ -23,7 +23,8 @@ To add an OCI-based Helm chart repository through the Rancher UI:
 3. In the left navigation bar, select **Apps > Repositories**.
 4. Click **Create**.
 5. Enter a **Name** for the registry. Select **OCI Repository** as the target.
-6. Enter the **OCI Repository Host URL** for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. The artifacts should all have unique names. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI repository will not be added. 
+6. Enter the **OCI Repository Host URL** for the registry. The registry endpoint must not contain anything besides OCI Helm Chart artifacts. The artifacts should all have unique names. If you attempt to add an endpoint that contains any other kinds of files or artifacts, the OCI repository will not be added.
+7. Input **Refresh Interval** seconds value. This will tell Rancher manager at what interval the Helm repository must be refreshed. The default is 86400 seconds.
   
   :::note
   
@@ -67,7 +68,7 @@ To view Helm charts in the OCI-based Helm chart repository after it achieves an 
 
 ## Refresh an OCI-Based Helm Chart Repository
 
-Rancher automatically refreshes the OCI-based Helm chart repository every 6 hours. 
+Rancher automatically refreshes the OCI-based Helm chart repository every 24 hours but the user has the option to change it.
 
 If you need to update immediately, you can [perform a manual refresh](../helm-charts-in-rancher/helm-charts-in-rancher.md#refresh-chart-repositories).
 
